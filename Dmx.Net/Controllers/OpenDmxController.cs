@@ -90,6 +90,7 @@ namespace Dmx.Net.Controllers
             base.Close();
 
             FT_Close(_handle);
+            _handle = IntPtr.Zero;
         }
 
         public override async Task WriteBuffer()
@@ -109,6 +110,8 @@ namespace Dmx.Net.Controllers
 
                 if (_status != Status.Ok)
                 {
+                    FT_Close(_handle);
+                    _handle = IntPtr.Zero;
                     throw new IOException($"Data write error ({_status}).");
                 }
             }
