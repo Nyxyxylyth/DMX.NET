@@ -10,7 +10,7 @@ namespace Dmx.Net.Controllers
     {
         public new bool IsOpen => _handle != IntPtr.Zero;
 
-        private const string DllName = $"{Config.LibPath}/FTD2XX";
+        private const string DllName = $"FTD2XX";
 
         #region INTEROP
 
