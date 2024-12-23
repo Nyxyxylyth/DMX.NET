@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Dmx.Net.MinimalSample": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

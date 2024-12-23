@@ -46,6 +46,11 @@ for(; ; )
                                   255, red2, green2, blue2, 0, 0, 0);
     Console.WriteLine("DMX bumped");
 
+    if( controller.IsOpen == false)
+    {
+        controller.Open(0);
+    }
+
     Thread.Sleep(5);
 }
 
